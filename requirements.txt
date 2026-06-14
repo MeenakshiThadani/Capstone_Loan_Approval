@@ -1,0 +1,30 @@
+# ── Core AI & Orchestration ──────────────────────────────────────────────────
+anthropic==0.40.0          # Anthropic Claude SDK (tool use, async, streaming)
+langgraph==0.2.50          # LangGraph state-machine orchestration engine
+langchain-core==0.3.86     # Base abstractions used by LangGraph
+
+# ── MCP (Model Context Protocol) ─────────────────────────────────────────────
+mcp==1.1.0                 # Official MCP Python SDK (client + server)
+
+# ── Web Layer ─────────────────────────────────────────────────────────────────
+fastapi==0.136.3            # REST microservice framework
+uvicorn[standard]==0.32.0  # ASGI server for FastAPI
+httpx==0.27.0              # Async HTTP client (used by agents & UI)
+streamlit==1.40.0          # Chatbot UI framework
+
+# ── Data Validation ───────────────────────────────────────────────────────────
+pydantic==2.10.0           # Schema definition and runtime validation
+pydantic-settings==2.6.0   # Settings management from .env
+
+# ── Configuration ─────────────────────────────────────────────────────────────
+python-dotenv==1.0.1       # Load .env files into os.environ
+
+# ── Testing ───────────────────────────────────────────────────────────────────
+pytest==8.3.0              # Test runner
+pytest-asyncio==0.24.0     # Async test support
+pytest-mock==3.14.0        # Mock/patch utilities
+pytest-cov==5.0.0          # Coverage reporting
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+anyio==4.13.0              # Async runtime (used internally by mcp)
+tenacity==9.1.4            # Retry logic with exponential back-off for LLM calls
